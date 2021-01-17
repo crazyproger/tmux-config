@@ -41,10 +41,10 @@ tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 
-printf "Installing oh-my-zsh"
+printf "Installing oh-my-zsh\n"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-printf "Copy zsh config"
+printf "Copy zsh config\n"
 cp -f "$HOME/.zshrc" "$HOME/.zshrc.bak" 2>/dev/null || true
 cp ./zshrc "$HOME/.zshrc"
 
