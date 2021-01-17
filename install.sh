@@ -40,4 +40,13 @@ tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 "$HOME"/.tmux/plugins/tpm/bin/install_plugins || true
 tmux kill-session -t __noop >/dev/null 2>&1 || true
 
-printf "OK: Completed\n"
+
+printf "Installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+printf "Copy zsh config"
+cp -f "$HOME/.zshrc" "$HOME/.zshrc.bak" 2>/dev/null || true
+cp ./zshrc "$HOME/.zshrc"
+
+
+printf "OK: Completed, please reload shell\n"
