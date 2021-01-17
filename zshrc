@@ -21,8 +21,7 @@ export SAVEHIST=10000
 export HISTSIZE=10000
 
 
-PROMPT=$'%{\e[0;32m%}[%{\e[0;33m%}%T %{\e[0;32m%}%m: %{$fg[cyan]%}%~%{\e[0;32m%}] %{\e[1;31m%}%(?.%{\e[0;32m%}.%{\e[1;31m%})%#
-%{\e[0m%} '
+PROMPT=$'%{\e[0;32m%}[%{\e[0;33m%}%T %{\e[0;32m%}%m: %{$fg[cyan]%}%~%{\e[0;32m%}] %{\e[1;31m%}%(?.%{\e[0;32m%}.%{\e[1;31m%})%#%{\e[0m%} '
 
 # install oh-my-zsh: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
