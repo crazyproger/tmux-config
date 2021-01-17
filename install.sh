@@ -48,5 +48,6 @@ printf "Copy zsh config\n"
 cp -f "$HOME/.zshrc" "$HOME/.zshrc.bak" 2>/dev/null || true
 cp ./zshrc "$HOME/.zshrc"
 
+git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/plugins/command-time
 
 printf "OK: Completed, please reload shell\n"
