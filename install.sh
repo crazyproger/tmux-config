@@ -41,13 +41,20 @@ tmux set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.tmux/plugins"
 tmux kill-session -t __noop >/dev/null 2>&1 || true
 
 
-printf "Installing oh-my-zsh\n"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -e "$HOME/.oh-my-zsh" ]; then
+  printf "Installing oh-my-zsh\n"
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 printf "Copy zsh config\n"
 cp -f "$HOME/.zshrc" "$HOME/.zshrc.bak" 2>/dev/null || true
 cp ./zshrc "$HOME/.zshrc"
 
-git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/plugins/command-time
+if [ ! -e "$HOME/.oh-my-zsh/custom/plugins/command-time" ]; then
+  git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/plugins/command-time
+fi
+
+cp -f "$HOME/.vimrc" "$HOME/.vimrc.bak" 2>/dev/null || true
+cp ./vimrc "$HOME/.vimrc"
 
 printf "OK: Completed, please reload shell\n"
