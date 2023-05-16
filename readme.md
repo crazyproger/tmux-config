@@ -1,3 +1,13 @@
+##### OS X Install fonts
+
+https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts 
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
+Iterm2->Settings->Profiles->Text->Non ASCII font==Nerd
+
+
 Tmux Configuration
 =====================
 Tmux configuration, that supercharges your [tmux](https://tmux.github.io/) and builds cozy and cool terminal environment.
