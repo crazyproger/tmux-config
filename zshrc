@@ -49,4 +49,5 @@ plugins=(git docker dotenv history rsync command-time)
 
 source $ZSH/oh-my-zsh.sh
 
-
+# Machine-local settings (aliases, PATH), not tracked in git
+[[ -r ~/.zshrc.local ]] && source ~/.zshrc.local
